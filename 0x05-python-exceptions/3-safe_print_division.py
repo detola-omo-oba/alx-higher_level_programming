@@ -1,15 +1,15 @@
 #!/usr/bin/python3
+"""
+a function that divides 2 integers
+and prints the result.
+"""
 
 
 def safe_print_division(a, b):
-    """
-    divides two integers and prints the result
-    catches divide by zero exception
-    """
     try:
         res = a / b
-    except:
+    except ZeroDivisionError:
         res = None
     finally:
         print("Inside result: {}".format(res))
-    return res
+        return res
